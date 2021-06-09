@@ -29,7 +29,7 @@ extension Lay where Self: Any {
     /// - Parameter block: A closure that set properties' value inside it
     /// - Returns: The type of self
     @inlinable
-    static func lay(_ block: InoutBlock) -> Self {
+    public static func lay(_ block: InoutBlock) -> Self {
         var instance = self.init()
         block(&instance)
         return instance
@@ -38,7 +38,7 @@ extension Lay where Self: Any {
     /// Change the properties' value
     /// - Parameter block: A closure that change properties' value inside it
     @inlinable
-    mutating func move(_ block: InoutBlock) {
+    public mutating func move(_ block: InoutBlock) {
         block(&self)
     }
 }
@@ -50,7 +50,7 @@ extension Lay where Self: AnyObject {
     /// - Parameter block: A closure that set properties' value inside it
     /// - Returns: The type of self
     @inlinable
-    static func lay(_ block: Block) -> Self {
+    public static func lay(_ block: Block) -> Self {
         let instance = self.init()
         block(instance)
         return instance
@@ -59,7 +59,7 @@ extension Lay where Self: AnyObject {
     /// Change the properties' value
     /// - Parameter block: A closure that change properties' value inside it
     @inlinable
-    func move(_ block: Block) {
+    public func move(_ block: Block) {
         block(self)
     }
 }
