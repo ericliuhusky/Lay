@@ -37,9 +37,12 @@ extension Lay where Self: Any {
     
     /// Change the properties' value
     /// - Parameter block: A closure that change properties' value inside it
+    /// - Returns: Changed self
     @inlinable
-    public mutating func move(_ block: InoutBlock) {
+    @discardableResult
+    public mutating func move(_ block: InoutBlock) -> Self {
         block(&self)
+        return self
     }
 }
 
@@ -58,8 +61,11 @@ extension Lay where Self: AnyObject {
     
     /// Change the properties' value
     /// - Parameter block: A closure that change properties' value inside it
+    /// - Returns: Changed self
     @inlinable
-    public func move(_ block: Block) {
+    @discardableResult
+    public func move(_ block: Block) -> Self {
         block(self)
+        return self
     }
 }
