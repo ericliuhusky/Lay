@@ -24,6 +24,16 @@
 
     It's annoyed to type a pair of brackets everytime when initialize a view and set it's properties.
 
+- ### Required Init Param
+
+    There's always a situation that an initializer requires parameters. (eg: UICollectionView)
+
+    ```swift
+    let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: .init()).move { collectionView in
+
+    }
+    ```
+
 - ### Initialize
 
     ```swift
@@ -88,7 +98,7 @@
 
     ```swift
     dependencies: [
-        .package(url: "https://github.com/ericliuhusky/Lay.git", .upToNextMajor(from: "0.1.0"))         
+        .package(url: "https://github.com/ericliuhusky/Lay.git", .upToNextMajor(from: "0.1.1"))         
     ]
 
     targets: [
