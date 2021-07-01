@@ -1,5 +1,8 @@
 # Lay
 
+[![SPM](https://img.shields.io/badge/SPM-supported-orange)](https://swift.org/package-manager/)
+[![License](https://img.shields.io/github/license/ericliuhusky/Lay)](https://github.com/ericliuhusky/Lay/blob/main/LICENSE)
+
 ### **Lay** is a syntactic sugar of Swift initializers, to make code form of initializers more elegant and structured.
 
     The mother Swift laid an egg once upon a time, and the egg will incubate into a Swift one day. 
